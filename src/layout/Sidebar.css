@@ -1,0 +1,117 @@
+.sidebar-container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #212529;
+    height: fit-content;
+    width: 4rem;
+    margin-right: 2em;
+    position: fixed;
+    border-radius: 1.2em 0em 0em 1.2em;
+    z-index: 1;
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    transform: translate(50%, -50%);
+    padding: 1em 0em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-menu {
+    border: none;
+    margin: 0.3em;
+    position: relative;
+    background-color: transparent;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.sidebar-menu:hover .sidebar-menu-item {
+    color: #fff;
+    border: none;
+    font-size: 1.6em;
+    border-radius: 0.5em;
+    margin: 0.3em;
+    background: #087f5b;
+    position: relative;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.sidebar-menu-item {
+    border: none;
+    font-size: 1.6em;
+    border-radius: 0.6em;
+    margin: 0.3em;
+    position: relative;
+    background: none;
+    color: #20c997;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 0.1s all ease-in;
+}
+
+
+.sidebar-menu-item.active {
+    color: #ffffff;
+    border: none;
+    font-size: 1.6em;
+    border-radius: 0.5em;
+    margin: 0.3em;
+    background: #087f5b;
+    position: relative;
+    height: 1.5em;
+    width: 1.5em;
+    transition: 0.3s;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sidebar-menu-item-label {
+    position: absolute;
+    margin-right: 10em;
+    font-weight: bold;
+    white-space: nowrap;
+    display: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.sidebar-menu:hover .sidebar-menu-item-label {
+    display: block;
+    animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar-container {
+        display: none;
+    }
+}

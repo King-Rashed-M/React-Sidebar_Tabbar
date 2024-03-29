@@ -1,0 +1,55 @@
+.tabs-container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #212529;
+    height: 4.5em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5em;
+    display: none;
+}
+
+.tab-menu {
+    border: none;
+    position: relative;
+    background: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tab-menu-item {
+    border: none;
+    font-size: 1.6em;
+    position: relative;
+    background: none;
+    color: #20c997;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.tab-menu-item-label {
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .tabs-container {
+        display: flex;
+    }
+}
